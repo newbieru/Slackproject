@@ -17,9 +17,11 @@ defmodule Msg do
 		IO.puts("Please enter message:")
 		text= IO.gets text
 		method="/api/chat.postMessage"
-		body= Poison.encode!(%{chennel: id, text: text, })
-		# body
+		body= Poison.encode!(%{channel: id, text: text, })
 		headers=[{"Content-Type", "application/json; charset=utf-8"},{"Authorization","Bearer #{token}"}]
+		# IO.puts method
+		# IO.puts body
+		# IO.puts headers
 		Slack.post!(method,body,headers)
 	 end
 end

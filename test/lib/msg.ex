@@ -17,7 +17,7 @@ defmodule Msg do
 		IO.puts("Please enter message:")
 		text= IO.gets text
 		method="/api/chat.postMessage"
-		body= Poison.encode!(%{channel: id, text: text, })
+		body= Poison.encode!(%{channel: id, text: text, as_user: true})
 		headers=[{"Content-Type", "application/json; charset=utf-8"},{"Authorization","Bearer #{token}"}]
 		# IO.puts method
 		# IO.puts body

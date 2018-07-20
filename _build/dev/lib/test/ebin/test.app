@@ -1,0 +1,9 @@
+{application,test,
+             [{description,"test"},
+              {modules,['Elixir.Extr','Elixir.History','Elixir.Msg',
+                        'Elixir.Names','Elixir.Slack','Elixir.Test',
+                        'Elixir.Token']},
+              {registered,[]},
+              {vsn,"0.1.0"},
+              {extra_applications,[logger]},
+              {applications,[kernel,stdlib,elixir,logger,httpoison]}]}.
